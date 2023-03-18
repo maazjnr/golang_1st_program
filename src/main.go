@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 func beyondHelloWorld() {
 	var x int
 	x = 5
@@ -21,9 +20,37 @@ func beyondHelloWorld() {
 	fmt.Println("the value is", x, "Y value is", y, "my name is", myName)
 }
 
+func myDepartment() {
+	dept := Department{
+
+		Name:     "Maaz Junior",
+		Location: "Abuja Nigeria",
+
+		Employee: Employee{
+			Name:  "Raheemzy",
+			Age:   20,
+			Title: "Frontend Developer",
+		},
+	}
+
+	fmt.Println(dept.Employee.Name)
+}
+
+type Department struct {
+	Name     string
+	Location string
+	Employee Employee
+}
+
+type Employee struct {
+	Name  string
+	Age   int
+	Title string
+}
+
 func returnedValue() (sum, production int) {
 	w := 10
-	z := 20
+	z := 21
 	return w + z, w * z
 }
 
@@ -39,12 +66,12 @@ func arrayLoop() {
 	for i := 0; i < len(b); i++ {
 		fmt.Println("the value os the index is", b[i])
 	}
-
 }
-
 
 func main() {
 	fmt.Println("my first go program")
 	beyondHelloWorld()
 	arrayLoop()
+	myDepartment()
+
 }
