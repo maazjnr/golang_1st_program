@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	fmt.Println("Welcome to the quiz game!")
 
 	fmt.Printf("Enter your name: ")
 
-	var name string;
+	var name string
 	fmt.Scan(&name)
 
 	fmt.Printf("Hello, %v Welcome to the quiz game!\n", name)
@@ -32,11 +32,8 @@ func main()  {
 	fmt.Scan(&answer, &answer2)
 	fmt.Println(answer, answer2)
 
-	if answer + " " + answer2 == "RTX 390" || if answer + " " + answer2 == "rtx 390" {
+	if answer+" "+answer2 == "RTX 390" || answer+" "+answer2 == "rtx 390" {
 		fmt.Println("Correct!")
-		score++
-	} else {
-		fmt.Println("Rtx lowercase correct")
 		score++
 	} else {
 		fmt.Println("Incorrect")
@@ -53,7 +50,7 @@ func main()  {
 		fmt.Println("Incorrect answer")
 	}
 
-	fmt.Printf("You score %v out of %v \n",  score, num_question)
+	fmt.Printf("You score %v out of %v \n", score, num_question)
 	percent := (float64(score) / float64(num_question)) * 100
 	fmt.Printf("You scored: %v%%.", percent)
 
